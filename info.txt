@@ -1,0 +1,12 @@
+para criar o docker-compose.yml
+docker-compose up -d
+
+para acessar o container do banco de dados
+docker exec -it $(docker ps -qf "name=projetophp-db-1") mysql -uuser -puser_password clientes_db
+
+para criar a tabela no banco de dados
+CREATE TABLE clientes (
+    ->     id INT AUTO_INCREMENT PRIMARY KEY,
+    ->     nome VARCHAR(100) NOT NULL,
+    ->     email VARCHAR(100) NOT NULL
+    -> );
